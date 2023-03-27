@@ -8,12 +8,15 @@ To get started, simply browse the riddles.md file in this repository, which cont
 
 You can also add your own riddles to the list by submitting a pull request. We encourage contributions from educators and students alike, as long as the riddles are appropriate for young learners and have not been included in the list before.
 
-### Uploading answer
-To Uploading your answer to the list, follow these steps:
+### getting started 
+To pull a riddle from the repository, follow these steps:
 
 Fork this repository and clone it to your local machine.
 
-Open the riddles.md file in your text editor.
+note: Fork is necessary in scenarios you want push your answer to the mentor cheking
+in ather case you can clone only.
+
+Open the riddles files in your Pycharm.
 
 Add your riddle and its answer to the end of the list, following the existing format:
 
@@ -32,8 +35,8 @@ Submit a pull request to the main repository.
 
 We will review your contribution and merge it if it meets our criteria.
 
-License
+### License
 This repository is licensed under the MIT License. Feel free to use, copy, and modify the riddles in this list for educational purposes. However, we cannot guarantee the accuracy or reliability of the answers, and we are not responsible for any consequences that may arise from their use. Use at your own risk!
 
-Credits
+### Credits
 This repository is maintained by [Your Name], with contributions from educators and students around the world. We thank everyone who has shared their riddles with us, and we hope you enjoy using them in your teaching.
