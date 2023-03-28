@@ -9,4 +9,19 @@
 #Do not allocate extra space for another array.
 # You must do this by modifying the input array in-place with O(1) extra memory.
 def remove_duplicates(nums):
+    ##stile 1
+    # i = 0
+    # while i < len(nums):
+    #     if nums[i] == nums[i + 1]:
+    #         nums.remove(nums[i])
+    #     else:
+    #         i += 1
+    #
+    # return len(nums)
+    ##stile 2
+    # for j in range(1, len(nums)):
+    #     if nums[i] != nums[j]:
+    #         i += 1
+    #         nums[i] = nums[j]
+    # return i + 1
     #implement your code here
