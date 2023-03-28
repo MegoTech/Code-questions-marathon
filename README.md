@@ -31,4 +31,4 @@ Copy code
 This repository is licensed under the MIT License. Feel free to use, copy, and modify the riddles in this list for educational purposes. However, we cannot guarantee the accuracy or reliability of the answers, and we are not responsible for any consequences that may arise from their use. Use at your own risk!
 
 ### Credits
-This repository is maintained by [@moshe-h-m, ], with contributions from educators and students around the world. We thank everyone who has shared their riddles with us, and we hope you enjoy using them in your teaching.
+This repository is maintained by [@moshe-h-m, @AssafBrown92], with contributions from educators and students around the world. We thank everyone who has shared their riddles with us, and we hope you enjoy using them in your teaching.
