@@ -1,6 +1,7 @@
 
 from RemoveDuplicates import remove_duplicates
 from BuyAndSell import best_deal
+from TheKWeakestRows import the_k_weakest_rows
 
 #here is the test code
 
@@ -20,17 +21,38 @@ if __name__ == '__main__':
     #     print("Test 2 Passed")
 
     #~~~~~~~~~~~~~~~this is the test for the BuyAndSell.py~~~~~~~~~~~~~~~#
-    prices = [7, 1, 5, 3, 6, 4]
-    max_profit = best_deal(prices)
-    if max_profit == 5:
+    # prices = [7, 1, 5, 3, 6, 4]
+    # max_profit = best_deal(prices)
+    # if max_profit == 5:
+    #     pased += 1
+    #     print("Test 1 Passed")
+    # prices = [7, 6, 4, 3, 1]
+    # max_profit = best_deal(prices)
+    # if max_profit == 0:
+    #     pased += 1
+    #     print("Test 2 Passed")
+
+    #~~~~~~~~~~~~~~~this is the test for the TheKWeakestRows.py~~~~~~~~~~~~~~~#
+
+    mat = [[1, 1, 0, 0, 0],
+            [1, 1, 1, 1, 0],
+            [1, 0, 0, 0, 0],
+            [1, 1, 0, 0, 0],
+            [1, 1, 1, 1, 1]]
+    k = 3
+    rows = the_k_weakest_rows(mat, k)
+    if rows == [2, 0, 3]:
         pased += 1
         print("Test 1 Passed")
-    prices = [7, 6, 4, 3, 1]
-    max_profit = best_deal(prices)
-    if max_profit == 0:
+    mat = [[1, 0, 0, 0],
+           [1, 1, 1, 1],
+           [1, 0, 0, 0],
+           [1, 0, 0, 0]]
+    k = 2
+    rows = the_k_weakest_rows(mat, k)
+    if rows == [0, 2]:
         pased += 1
         print("Test 2 Passed")
-
     if pased == 2:
         print('Done! Good Job! Alufffffffffffffffff!!!!!!')
     elif pased == 1:

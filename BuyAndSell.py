@@ -10,5 +10,11 @@
 # If you cannot achieve any profit, return 0.
 
 def best_deal(prices: list) -> int:
-    # implement your code here
-    return 0
+    max_profit = 0
+    for i in range(len(prices)):
+        for j in range(i + 1, len(prices)):
+            if prices[i] - prices[j] < max_profit:
+                max_profit = (prices[i] - prices[j])
+    return abs(max_profit)
+
+
