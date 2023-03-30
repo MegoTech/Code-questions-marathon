@@ -1,4 +1,6 @@
-# You are given an m x n binary matrix mat of 1's (representing soldiers)
+#this question is for the 30/03/2023 day challenge
+
+#You are given an m x n binary matrix mat of 1's (representing soldiers)
 # and 0's (representing civilians).
 # The soldiers are positioned in front of the civilians.
 # That is, all the 1's will appear to the left of all the 0's in each row.
