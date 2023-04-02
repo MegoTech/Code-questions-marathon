@@ -14,6 +14,6 @@
 # in the matrix ordered from weakest to strongest.
 
 def the_k_weakest_rows(mat: list[list[int]], k: int) -> list:
-
-    # implement your code here
-    return []
+    mat = [[sum(row), i] for i, row in enumerate(mat)]
+    mat.sort()
+    return [row[1] for row in mat[:k]]
