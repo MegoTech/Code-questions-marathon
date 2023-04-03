@@ -3,6 +3,8 @@ from RemoveDuplicates import remove_duplicates
 from BuyAndSell import best_deal
 from TheKWeakestRows import the_k_weakest_rows
 from paskal import generate_triangle
+from oneTime import single_number
+from Buzz import fizz_buzz
 
 #here is the test code
 
@@ -56,21 +58,40 @@ if __name__ == '__main__':
     #     print("Test 2 Passed")
 
     #~~~~~~~~~~~~~~~this is the test for the paskal.py~~~~~~~~~~~~~~~#
-    numRows = 5
-    triangle = generate_triangle(numRows)
-    if triangle == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]:
+    # numRows = 5
+    # triangle = generate_triangle(numRows)
+    # if triangle == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]:
+    #     pased += 1
+    #     print("Test 1 Passed")
+    # numRows = 1
+    # triangle = generate_triangle(numRows)
+    # if triangle == [[1]]:
+    #     pased += 1
+    #     print("Test 2 Passed")
+
+    #~~~~~~~~~~~~~~~~this is the test for the oneTime.py~~~~~~~~~~~~~~~~~~#
+    print('this is testing for tow questions oneTime.py and Buzz.py')
+    if single_number([2, 2, 1]) == 1:
         pased += 1
-        print("Test 1 Passed")
-    numRows = 1
-    triangle = generate_triangle(numRows)
-    if triangle == [[1]]:
+        print("test 1 passed")
+
+    if single_number([4, 1, 2, 1, 2]) == 4:
         pased += 1
-        print("Test 2 Passed")
+        print("test 2 passed")
+
+    #~~~~~~~~~~~~~~~~this is the test for the Buzz.py~~~~~~~~~~~~~~~~~~#
+    if fizz_buzz(15) == ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]:
+        pased += 1
+        print("test 1 passed")
+    if fizz_buzz(5) == ["1","2","Fizz","4","Buzz"]:
+        pased += 1
+        print("test 2 passed")
 
 
-
-    if pased == 2:
+    if pased == 4:
         print('Done! Good Job! Alufffffffffffffffff!!!!!!')
+    elif pased == 3 or pased == 2:
+        print('almost there !? 2 or 3 tests passed, try again')
     elif pased == 1:
         print('only one test passed, try again')
     else:
