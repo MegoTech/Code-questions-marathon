@@ -16,4 +16,5 @@
 # string) if none of the above conditions are true.
 
 def fizz_buzz(n: int) -> list:
-    return [str(i) if i % 3 and i % 5 else "Fizz" * (not i % 3) + "Buzz" * (not i % 5) for i in range(1, n + 1)]
+    #implement your code here
+    return []
