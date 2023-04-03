@@ -16,5 +16,5 @@
 # string) if none of the above conditions are true.
 
 def fizz_buzz(n: int) -> list:
-    #implement your code here
+    #implement your solution here
     return []
