@@ -1,0 +1,16 @@
+defangIP solution
+
+return address.replace(".", "[.]")
+
+________________________________________________
+
+oddDifranrt solution
+
+    difrent = [[]]
+    for word in words:
+        difrent.append( [ord(word[i + 1]) - ord(word[i]) for i in range(len(word) - 1)] )
+    for i in range(1, len(difrent)):
+        if difrent[i] != difrent[i + 1]:
+            return words[i]
+
+________________________________________________
