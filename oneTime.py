@@ -8,5 +8,13 @@
 
 def single_number(nums: list) -> int:
     #implement your code here
-    return 0
+    duplicity = {}
+    for num in nums:
+        if num in duplicity:
+            duplicity[num] += 1
+        else:
+            duplicity[num] = 1
+    for key, val in duplicity.items():
+        if val == 1:
+            return key
 
