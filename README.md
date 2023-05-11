@@ -9,7 +9,7 @@ https://git-scm.com/downloads
 
 here are some general instructions how to use it:
 
-https://www.codebrain.co.il/%D7%9E%D7%93%D7%A8%D7%99%D7%9A-%D7%9C-git-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%92%D7%A8%D7%A1%D7%90%D7%95%D7%AA-%D7%A7%D7%95%D7%93/
+*~~*[Instructions for using Git](https://www.codebrain.co.il/%D7%9E%D7%93%D7%A8%D7%99%D7%9A-%D7%9C-git-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%92%D7%A8%D7%A1%D7%90%D7%95%D7%AA-%D7%A7%D7%95%D7%93/)*~~*
 
 ### getting started 
 To pull a riddle from the repository, follow these steps:
