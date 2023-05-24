@@ -11,5 +11,7 @@
 # class from the collections module.
 
 def count_char(string: str) -> list:
-    #implement your code here
-    return []
+        new_dict = {}
+    for char in str:
+        new_dict[char] = new_dict.get(char, 0) + 1
+    return sorted(new_dict.items(), key= lambda x: x[1], reverse=True)
