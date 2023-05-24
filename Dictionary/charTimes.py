@@ -13,3 +13,7 @@
 def count_char(string: str) -> list:
     #implement your code here
     return []
+
+def count_char_yosi_miller(str):
+    sort_dic = dict()
+    pass
