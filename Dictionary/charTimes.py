@@ -13,4 +13,17 @@
 def count_char_moshe(string: str) -> list:
     #implement your code here
     dict = {}
-    return []
+    for i in string:
+        if i in dict:
+            dict[i] += 1
+        else:
+            dict[i] = 1
+    list = []
+    for i in dict:
+        list.append((i, dict[i]))
+    list.sort(key=lambda x: x[1], reverse=True)
+    return list
+
+if __name__ == '__main__':
+
+    print(count_char_moshe("hello world"))
