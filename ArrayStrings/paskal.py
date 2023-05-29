@@ -27,4 +27,8 @@ def generate_triangle(numRows: int) -> List[List[int]]:
 
 
 
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    generate_triangle(5)
+    pass
 
