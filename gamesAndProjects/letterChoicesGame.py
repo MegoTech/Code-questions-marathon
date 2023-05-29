@@ -30,4 +30,46 @@
 #~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == '__main__':
     # add your tests here
-    pass
+    import random
+
+
+    def choose_word(words):
+        return random.choice(words)
+    #this function choose one of the given words
+
+    def initiallize_word(word):
+        return ['_'] * len(word)
+    #create the starting line with no letters
+
+    def update_word(word, guessed_word, letter):
+        for i in range(len(word)):
+            if word[i] == letter:
+                guessed_word[i] = letter
+        return guessed_word
+    #added the correct letter to the answer line
+
+    def print_word(word):
+        print("the word is:",(''.join(word)))
+    #print the answer line without the []
+
+    def letter_choices_game(words):
+        word = choose_word(words)
+        guessed_word = initiallize_word(word)
+
+        print("welcome to a letter choice game")
+        print_word(guessed_word)
+
+        while True:
+            guess = input("guess a letter: ")
+            if guess in word:
+                guessed_word = update_word(word, guessed_word, guess)
+                print_word(guessed_word)
+                if '_' not in guessed_word:
+                    print("חיילך לאורייתא! רואים שאתה מתלמידי מיגו המובחרים ;)")
+                    break
+
+
+words = ["apple", "banana", "orange"]
+letter_choices_game(words)
+
+#~~~~~~~~~~~$~~~~~~~~~
