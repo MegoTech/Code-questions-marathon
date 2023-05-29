@@ -1,33 +1,48 @@
-#5. Complex task:
-# Write a program that simulates a simple game of hangman.
-# The program should randomly choose a word from a list of words,
-# and display the word with underscores in place of the letters.
-# The user should then be prompted to guess a letter.
-# If the letter is in the word,
-# the program should replace the corresponding underscore with the letter.
-# If the letter is not in the word,
-# the program should subtract a life (the user starts with 5 lives)
-# and display the updated state of the player.
-# The game should continue until the user correctly guesses the word or runs out of lives.
-# Use functions to organize your code.
-#
-# Example input/output:
-# Possible words: ["apple", "banana", "orange"]
-# The word is: _ _ _ _ _
-# Guess a letter: a
-# The word is: a _ _ _ _
-# Guess a letter: r
-# The word is: a p p _ _
-# Guess a letter: p
-# The word is: a p p _ _
-# Guess a letter: l
-# The word is: a p p l _
-# Guess a letter: e
-# Congratulations, you guessed the word!
+from random import randint
 
-# Tip: divide the task into smaller tasks and write a function for each task.
+WORD_LIST = "grip arch spiders ratty amazing coat high-pitched direction learned coordinated teeny-tiny argue standing pet territory domineering adhesive account hurry educate right flood shivering cushion aftermath shrill scream delightful internal tip hysterical month abject nostalgic flat yarn spoil sharp illegal detailed hope branch grape slave dull imperfect smiling strange spotty snails didactic collar absorbing grin writing jealous prevent nonstop placid yawn smile scandalous incandescent normal pop country disastrous roof scorch pushy delicate kneel damage round milk acceptable act guarantee view excited obnoxious righteous spare perpetual dangerous smash morning matter hover return judicious bells note queen worried acoustic berserk head remove brawny".split()
+LIVES = 10
 
-#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+
+def render_word(word, guessed_letters):
+    rendered_word = ''
+    for l in word:
+        if l in guessed_letters:
+            rendered_word += l
+        else:
+            rendered_word += '_'
+    return rendered_word
+
+def check_victory(word, guessed_letters):
+    for l in word:
+        if l not in guessed_letters:
+            return False
+    return True
+
+def prompt():
+    return input("Please guess a letter:\n")
+
+def main():
+    lives = LIVES
+    word = WORD_LIST[randint(0, len(WORD_LIST)-1)]
+    guessed_letters = []
+    while lives >= 0:
+        guess = prompt()
+        if guess in guessed_letters:
+            print("You guessed that already!")
+            continue
+        if guess not in word:
+            lives -= 1
+            print('Lives:', lives)
+        guessed_letters.append(guess)
+        if check_victory(word, guessed_letters):
+            print(word)
+            print("Congratulations! you won!")
+            break
+        print(render_word(word, guessed_letters))
+    else:
+        print("Too bad! You lost!")
+        print("The word was:", word)
+
 if __name__ == '__main__':
-    # add your tests here
-    pass
+    main()
