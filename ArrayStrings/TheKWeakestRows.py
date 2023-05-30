@@ -17,3 +17,20 @@ def the_k_weakest_rows(mat: list[list[int]], k: int) -> list:
     mat = [[sum(row), i] for i, row in enumerate(mat)]
     mat.sort()
     return [row[1] for row in mat[:k]]
+
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    the_k_weakest_rows([[1,1,0,0,0],
+                        [1,1,1,1,0],
+                        [1,0,0,0,0],
+                        [1,1,0,0,0],
+                        [1,1,1,1,1]], 3)
+
+    if the_k_weakest_rows([[1,1,0,0,0],
+                           [1,1,1,1,0],
+                           [1,0,0,0,0],
+                           [1,1,0,0,0],
+                           [1,1,1,1,1]], 3) == [2,0,3]:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")

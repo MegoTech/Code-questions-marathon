@@ -27,3 +27,15 @@ def remove_duplicates(nums: list) -> int:
     # return i + 1
     #implement your code here
     return 0
+
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    remove_duplicates([1, 1, 2])
+    if remove_duplicates([1, 1, 2]) == 2:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")
+    if remove_duplicates([0,0,1,1,1,2,2,3,3,4]) == 5:
+        print("pass 2 test")
+    else:
+        print("fail 2 test")

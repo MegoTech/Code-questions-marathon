@@ -17,4 +17,9 @@ def best_deal(prices: list) -> int:
                 max_profit = (prices[i] - prices[j])
     return abs(max_profit)
 
-
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    if best_deal([7,1,5,3,6,4]) == 5:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")

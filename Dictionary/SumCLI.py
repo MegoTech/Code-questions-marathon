@@ -22,5 +22,9 @@ def comennds_num(comends):
 
     return [len(commands[keyM]) for keyM in commands.keys()]
 
-print(comennds_num(["ls", "cp", "mv", "mv", "mv", "mv","!1", "!3", "!6"]))
-print(comennds_num(["cp", "ls", "mv", "!2", "!1", "ls", "!3", "!6"]))
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    if comennds_num(["cp", "ls", "mv", "!2", "!1", "ls", "!3", "!6"]) == [1, 2, 1]:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")

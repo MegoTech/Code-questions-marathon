@@ -10,20 +10,6 @@
 # define a custom sorting order for the list of tuples representing the character counts or Counter
 # class from the collections module.
 
-def count_char(string):
-    dic_list = {}
-    res_list = []
-    for i in string:
-        key = i
-        if key not in dic_list:
-            dic_list[key] = 1
-        else:
-            dic_list[key] += 1
-
-    for key, val in reversed(sorted(dic_list.items(), key=lambda x: x[1])):
-        res_list.append((key, val))
-
-    return res_list
-
-string = 'hello world'
-print(count_char(string))
+def count_char(string: str) -> list:
+    #implement your code here
+    return []
