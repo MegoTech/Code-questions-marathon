@@ -27,7 +27,62 @@
 
 # Tip: divide the task into smaller tasks and write a function for each task.
 
+import random as rm
+def choice_word_mendi_yacobovitz(words):
+    word = rm.choice(words)
+    return word
+def start_mendi_yacobobvitz(word):
+    print("Welcome to the game")
+    res_list = []
+    for i in range(len(word)):
+        res_list.append('-')
+    print(*res_list)
+    return res_list
+def play_game_mendi_yacobobvitz(res_list, word):
+    """""
+    the function ask from the plyer to guess a letter, and checks if this letter is correct and writes this in a place.
+    """""
+    while True:
+        letter = input("guess a letter: ")
+        try:
+            if 123 > ord(letter.lower()) > 96:
+                break
+        except SyntaxError:
+            print("Error")
+        except TypeError:
+            print("error")
+
+    # checks if this letter is correct and writes this in a place
+    if letter in word:
+        for i in range(len(res_list)):
+            if res_list[i] == '-':
+                if word[i] == letter:
+                    res_list[i] = letter
+                break
+    return res_list
+def main():
+    choice_word_mendi_yacobovitz(words=[])
+    start_mendi_yacobobvitz(word)
+    play_game_mendi_yacobobvitz(res_list, word)
+
 #~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == '__main__':
-    # add your tests here
-    pass
+    word = choice_word_mendi_yacobovitz(words=["apple", "banana", "orange"])
+    res_list = start_mendi_yacobobvitz(word)
+    n = 5
+    while n != 0:
+        second_list = res_list[::]
+        res_list = play_game_mendi_yacobobvitz(res_list, word)
+        print("the word is: ", *res_list)
+
+        # checks if the player guessed all word
+        if '-' not in res_list:
+            print("Well done")
+            break
+
+        # checks if the player guessed a correct letter
+        if second_list == res_list:
+            n -= 1
+    if n == 0:
+        print("game over")
+
