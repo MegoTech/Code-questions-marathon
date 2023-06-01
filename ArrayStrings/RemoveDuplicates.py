@@ -9,21 +9,28 @@
 #Do not allocate extra space for another array.
 # You must do this by modifying the input array in-place with O(1) extra memory.
 def remove_duplicates(nums: list) -> int:
-    # Fill this in.
-    ##style 1
-    # i = 0
-    # while i < len(nums):
-    #     if nums[i] == nums[i + 1]:
-    #         nums.remove(nums[i])
-    #     else:
-    #         i += 1
-    #
-    # return len(nums)
-    ##style 2
-    # for j in range(1, len(nums)):
-    #     if nums[i] != nums[j]:
-    #         i += 1
-    #         nums[i] = nums[j]
-    # return i + 1
-    #implement your code here
-    return 0
+    n = 0
+    for i in range(1 ,len(nums)):
+       if nums[n] != nums[i]:
+            n += 1
+            nums[n] = nums[i]
+
+    return nums[:max(nums)]
+
+list1 = [1,1,2,3,4,5,5,5,6,6,7]
+print(remove_duplicates(list1))
+
+
+
+
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+    remove_duplicates([1, 1, 2])
+    if remove_duplicates([1, 1, 2]) == 2:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")
+    if remove_duplicates([0,0,1,1,1,2,2,3,3,4]) == 5:
+        print("pass 2 test")
+    else:
+        print("fail 2 test")

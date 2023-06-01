@@ -18,3 +18,10 @@ def single_number(nums: list) -> int:
         if val == 1:
             return key
 
+#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
+if __name__ == '__main__':
+
+    if single_number([2,2,1]) == 1:
+        print("pass 1 test")
+    else:
+        print("fail 1 test")
