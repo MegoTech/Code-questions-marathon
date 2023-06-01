@@ -10,29 +10,28 @@
 # define a custom sorting order for the list of tuples representing the character counts or Counter
 # class from the collections module.
 
+
 def count_char(string: str):
-    #implement your code here
+    # Implement your code here
     dict = {}
     for i in string:
         if i in dict:
             dict[i] += 1
         else:
             dict[i] = 1
-    list = []
+    result = []
     for i in dict:
-        list.append((i, dict[i]))
-    list.sort(key=lambda x: x[1], reverse=True)
-    return list
-if __name__ == '__main__':
+        result.append((i, dict[i]))
+    result.sort(key=lambda x: x[1], reverse=True)
+    return result
 
+if __name__ == '__main__':
     print(count_char('hello world'))
-    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1),
-                                     ('d', 1)]:
+    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1), ('d', 1)]:
         print("pass 1 test")
     else:
         print("fail 1 test")
-    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1),
-                                     ('d', 1)]:
+    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1), ('d', 1)]:
         print("pass 2 test")
     else:
         print("fail 2 test")
