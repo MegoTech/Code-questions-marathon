@@ -12,16 +12,3 @@
 
 def count_char(string: str) -> list:
     #implement your code here
-    pass
-
-#~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
-if __name__ == '__main__':
-    print(count_char('hello world'))
-    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1), ('d', 1)]:
-        print("pass 1 test")
-    else:
-        print("fail 1 test")
-    if count_char('hello world') == [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1), ('d', 1)]:
-        print("pass 2 test")
-    else:
-        print("fail 2 test")
