@@ -12,7 +12,7 @@
 
 def count_char(string: str) -> list:
     #implement your code here
-    return []
+    pass
 
 #~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == '__main__':
