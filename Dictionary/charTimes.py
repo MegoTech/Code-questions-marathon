@@ -24,6 +24,5 @@ def moshe_count_char(string: str) -> list:
     list.sort(key=lambda x: x[1], reverse=True)
     return list
 
-if __name__ == '__main__':
 
     print(name for name in moshe_count_char("hello world"))
