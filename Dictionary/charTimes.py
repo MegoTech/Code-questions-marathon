@@ -10,7 +10,7 @@
 # define a custom sorting order for the list of tuples representing the character counts or Counter
 # class from the collections module.
 
-def moshe_count_char(string: str) -> list:
+def count_char(string: str):
     #implement your code here
     dict = {}
     for i in string:
@@ -24,5 +24,3 @@ def moshe_count_char(string: str) -> list:
     list.sort(key=lambda x: x[1], reverse=True)
     return list
 
-
-    print(name for name in moshe_count_char("hello world"))
