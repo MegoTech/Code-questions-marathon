@@ -55,6 +55,7 @@ if __name__ == '__main__':
     def letter_choices_game(words):
         word = choose_word(words)
         guessed_word = initiallize_word(word)
+        lives = 5
 
         print("welcome to a letter choice game")
         print_word(guessed_word)
@@ -66,6 +67,13 @@ if __name__ == '__main__':
                 print_word(guessed_word)
                 if '_' not in guessed_word:
                     print("חיילך לאורייתא! רואים שאתה מתלמידי מיגו המובחרים ;)")
+                    break
+            else:
+                lives -= 1
+                print(f"wrong guess :( you have {lives} lives remaining.")
+                if lives == 0:
+                    print("game over. try harder next time!")
+                    print(f"the word was: {word}")
                     break
 
 
