@@ -26,8 +26,45 @@
 # Congratulations, you guessed the word!
 
 # Tip: divide the task into smaller tasks and write a function for each task.
+import random
+
+
+def choose_word(lst):
+    return lst[random.randint(0, len(lst) - 1)]
+
+
+def show_hidden_word(secret_word, old_letters_guessed):
+    new_list = list(secret_word)
+    for k in range(len(secret_word)):
+        if secret_word[k] not in old_letters_guessed:
+            new_list[k] = "_"
+    return " ".join(new_list)
+
+
+def check_win(secret_word, old_letters_guessed):
+    new_list = list(secret_word)
+    for j in range(len(secret_word)):
+        if new_list[j] not in old_letters_guessed:
+            return False
+    return True
+
+
+
 
 #~~~~~~~~~~~~~~~~~~test~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == '__main__':
     # add your tests here
-    pass
+    list1 = ["apple", "banana", "orange"]
+    guessed = []
+    i = 5
+    word_to_guess = choose_word(list1)
+    print("The word is: ", show_hidden_word(word_to_guess, guessed))
+    while i > 0:
+        letter = input("Guess a letter: ")
+        guessed.append(letter)
+        if letter not in word_to_guess:
+            i -= 1
+        print("The word is: ", show_hidden_word(word_to_guess, guessed))
+        if check_win(word_to_guess, guessed) is True:
+            print("Congratulations, you guessed the word!")
+            break
